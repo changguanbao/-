@@ -1,0 +1,110 @@
+<template>
+	<view class="page">
+		<view class="form">
+			<view class="f-input-box input-Account">
+				<text class="login-text">账号</text>
+				<input class="f-input"  type="text" :value="data.valueAccount"
+					:placeholder="data.placeholderAccount" ></input>
+			</view>
+			<view class="f-input-box">
+				<text class="login-text">密码</text>
+				<input class="f-input" type="password" :value="data.valuePassword"
+					:placeholder="data.placeholderPassword"></input>
+			</view>
+			<view class="btn-login">
+				<text class="btn-login-text">立即登录</text>
+			</view>
+		</view>
+	</view>
+</template>
+<script>
+export default {
+	name: 'hoc-login-form-lr',
+	apiready() {//like created
+	},
+	props: {
+		data: {
+			type: Object,
+			default: function () {
+				return {}
+			}
+		}
+	},
+	apiready() {//like created
+
+	},
+	data() {
+		return {
+			data: this.props.data || {
+				placeholderAccount: "请输入账号",
+				valueAccount: "",
+				placeholderPassword: "至少6位数字",
+				valuePassword: "",
+			}
+		}
+	},
+	methods: {
+
+	}
+}
+</script>
+<style>
+.page {
+	height: 100%;
+}
+.form {
+	margin-top: 50px;
+	font-size: 14px;
+}
+.btn-login{
+
+
+color: rgb(3, 36, 38);
+font-family: Noto Sans SC;
+font-size: 35px;
+font-weight: 700;
+line-height: 52px;
+
+
+
+}
+.f-input {
+
+width: 100%;
+height: 56px;
+top: 202px;
+left: 22px;
+background: rgb(173, 173, 173);
+border-radius: 10px;
+opacity: 0.1;
+color: rgb(0, 0, 0);
+font-family: Noto Sans SC;
+font-size: 14px;
+
+
+
+
+
+
+
+}
+.btn-login {
+	
+	margin-top: 20px;
+	width: 100%;
+	height: 56px;
+	border-radius: 10px;
+	background: rgb(99, 178, 255);
+	justify-content: center;
+	align-items: center;
+	color: #fff;
+}
+.btn-login-text {
+
+
+color: rgb(0, 0, 0);
+font-size: 14px;
+font-weight: 500;
+line-height: 21px;
+}
+</style>

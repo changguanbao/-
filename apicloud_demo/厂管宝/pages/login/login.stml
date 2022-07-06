@@ -1,0 +1,38 @@
+<template name='tpl'>
+    <view class="page">
+        <!-- 顶部导航 -->
+        <safe-area></safe-area>
+        <view class="login">
+            <hoc-login-title-lr class="hoc-login-title-lr_1" />
+            <hoc-login-form-lr />
+
+        </view>
+    </view>
+</template>
+<script>
+import '../../components/feature-component/hoc-login-title-lr.stml';
+import '../../components/feature-component/hoc-login-form-lr.stml';
+export default {
+    name: "hoc-login-lr",
+    data() {
+        return {
+            titleData: {
+				title: '登录'
+			    }
+            }
+    }
+}
+</script>
+<style>
+.page {
+    height: 100%;
+}
+.login {
+    height: 100%;
+    padding: 15px 25px 30px;
+    background-color: #fff;
+}
+.hoc-login-title-lr_1 {
+    font-weight: bolder;
+}
+</style>

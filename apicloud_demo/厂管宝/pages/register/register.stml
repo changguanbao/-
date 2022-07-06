@@ -1,0 +1,37 @@
+<template name='tpl'>
+	<view class="page">
+		<!-- 顶部导航 -->
+		<safe-area></safe-area>
+		<view class="register">
+			<hoc-login-title-lr :data="titleData" />
+			<hoc-verify-form-lr />
+			<hoc-register-footer-lr />
+		</view>
+	</view>
+</template>
+<script>
+import '../../components/feature-component/hoc-login-title-lr.stml'
+import '../../components/feature-component/hoc-verify-form-lr.stml'
+export default {
+	name: "hoc-register-lr",
+	data() {
+		return {
+			titleData: {
+				title: '注册',
+				otherText: '还没有账号？',
+				btnText: '点击注册'
+			}
+		}
+	}
+}
+</script>
+<style>
+.page {
+	height: 100%;
+}
+.register {
+	height: 100%;
+	padding: 15px 25px 30px;
+	background-color: #fff;
+}
+</style>
